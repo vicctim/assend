@@ -1,0 +1,12 @@
+/* Webfont: PowerGrotesk-Medium */@font-face {
+    font-family: 'PowerGroteskMed';
+    src: url('PowerGrotesk-Medium.eot'); /* IE9 Compat Modes */
+    src: url('PowerGrotesk-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('PowerGrotesk-Medium.woff') format('woff'), /* Modern Browsers */
+         url('PowerGrotesk-Medium.woff2') format('woff2'), /* Modern Browsers */
+         url('PowerGrotesk-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

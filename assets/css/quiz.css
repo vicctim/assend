@@ -1,0 +1,430 @@
+/* CSS principal do Quiz - modularizado */
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    min-width: 1920px;
+    min-height: 1080px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body.quiz-facil,
+body.quiz-medio,
+body.quiz-dificil {
+    width: 1920px;
+    height: 1080px;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.quiz-container {
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.pergunta {
+    position: relative;
+    width: 970px;
+    height: 200px;
+    margin-top: 200px;
+    margin-left: 40px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 0;
+}
+
+.pergunta-texto {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-left: 32px;
+    color: #001237;
+    font-size: 1.9em;
+    font-family: 'PowerGrotesk-Medium', Arial, sans-serif !important;
+}
+
+.pergunta-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.alternativas {
+    width: 650px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.alternativa-btn {
+    position: relative;
+    width: 650px;
+    height: 80px;
+    background: none;
+    border: none;
+    border-radius: 18px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    box-shadow: none;
+    cursor: pointer;
+    z-index: 1;
+    font-family: 'PowerGrotesk-Regular', Arial, sans-serif;
+    box-shadow: #7affda 1px 1px 16px 1px;
+    overflow: visible;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.alt-letra {
+    width: 70px;
+    background: #0b1e2d;
+    color: #2ff0e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PowerGrotesk-Bold', Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 2.1em;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.alt-texto {
+    flex: 1;
+    background: #bafff2;
+    color: #0b1e2d;
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    padding-left: 18px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-family: 'PowerGrotesk-Regular', Arial, sans-serif !important;
+    z-index: 1;
+    min-height: 100%;
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+}
+
+.overlay-alt-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 735.3px;
+    height: 138.6px;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.overlay-img {
+    position: absolute;
+    left: 49%;
+    top: 50%;
+    width: 108%;
+    height: 143%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    pointer-events: none;
+    mix-blend-mode: hard-light;
+    border-radius: 24px;
+    display: none;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos por categoria */
+body.quiz-medio .alt-texto {
+    background: #f6d86e !important;
+}
+
+body.quiz-medio .alternativa-btn {
+    box-shadow: #f6d86e 1px 1px 16px 1px !important;
+}
+
+body.quiz-medio .alt-letra {
+    color: #fbd935 !important;
+    font-family: 'PowerGrotesk-Bold', Arial, sans-serif !important;
+    font-weight: 700 !important;
+}
+
+body.quiz-dificil .alt-texto {
+    background: #ffa358 !important;
+}
+
+body.quiz-dificil .alternativa-btn {
+    box-shadow: #ffa358 1px 1px 16px 1px !important;
+}
+
+body.quiz-dificil .alt-letra {
+    color: #ff671c !important;
+}
+
+/* Fontes */
+@font-face {
+    font-family: 'PowerGrotesk-Medium';
+    src: url('/fonts/WOFF2/PowerGrotesk-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PowerGrotesk-Regular';
+    src: url('/fonts/WOFF2/PowerGrotesk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PowerGrotesk-Variable';
+    src: url('/fonts/VARIABLE FONT/WEB FONT/PowerGrotesk-Variable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PowerGrotesk-Bold';
+    src: url('/fonts/WOFF2/PowerGrotesk-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.quiz-opcoes-extra {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-top: 32px;
+    margin-left: 50px;
+}
+
+.quiz-opcao-btn {
+    background: #111;
+    border: 2px solid #3fffd6;
+    color: #3fffd6;
+    font-family: 'PowerGrotesk-Medium', Arial, sans-serif;
+    font-size: 1.05rem;
+    padding: 4px 16px;
+    margin: 0 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 16px #3fffd6a0;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 2px;
+    min-width: 100px;
+    min-height: 32px;
+}
+
+.quiz-opcao-btn:hover:not(.usado):not(:disabled),
+.quiz-opcao-btn.preconfirm {
+    background: #222;
+    color: #1fffc6;
+    border-color: #1fffc6;
+    box-shadow: 0 0 24px #1fffc6a0;
+}
+
+.quiz-opcao-btn.usado,
+.quiz-opcao-btn:disabled {
+    background: #111;
+    color: #23443e;
+    border-color: #23443e;
+    box-shadow: none;
+    text-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Estilo para botões extras na categoria média - alta especificidade */
+body.quiz-medio .quiz-opcao-btn,
+body.quiz-medio .botao-extra {
+    background-color: #f6d86e !important;
+    color: #222 !important;
+    border: 2px solid #f6d86e !important;
+    box-shadow: 0 4px 16px #f6d86e55 !important;
+}
+
+body.quiz-medio .quiz-opcao-btn.usado,
+body.quiz-medio .botao-extra.usado {
+    background-color: #e0c04c !important;
+    color: #888 !important;
+    border-color: #e0c04c !important;
+    opacity: 0.7;
+}
+
+body.quiz-medio .quiz-opcao-btn.confirmado,
+body.quiz-medio .botao-extra.confirmado {
+    box-shadow: 0 0 0 4px #f6d86e99 !important;
+    animation: pulse-medio 1s infinite;
+}
+
+@keyframes pulse-medio {
+    0% { box-shadow: 0 0 0 4px #f6d86e99; }
+    50% { box-shadow: 0 0 0 12px #f6d86e44; }
+    100% { box-shadow: 0 0 0 4px #f6d86e99; }
+}
+
+/* Estilo para botões extras na categoria difícil - alta especificidade */
+body.quiz-dificil .quiz-opcao-btn,
+body.quiz-dificil .botao-extra {
+    background-color: #202020 !important;
+    color: #ff671c !important;
+    border: 2px solid #ffa358 !important;
+    box-shadow: 0 4px 16px #ffa35855 !important;
+    text-shadow: none !important;
+}
+
+body.quiz-dificil .quiz-opcao-btn:hover:not(.usado):not(:disabled),
+body.quiz-dificil .botao-extra:hover:not(.usado):not(:disabled) {
+    background-color: #2a2a2a !important;
+    color: #ff671c !important;
+    border-color: #ffa358 !important;
+    box-shadow: 0 0 24px #ffa358a0 !important;
+    text-shadow: none !important;
+}
+
+body.quiz-dificil .quiz-opcao-btn.usado,
+body.quiz-dificil .botao-extra.usado {
+    background-color: #202020 !important;
+    color: #ff671c80 !important;
+    border-color: #ffa35880 !important;
+    opacity: 0.7;
+}
+
+body.quiz-dificil .quiz-opcao-btn.confirmado,
+body.quiz-dificil .botao-extra.confirmado {
+    box-shadow: 0 0 0 4px #ffa35899 !important;
+    animation: pulse-dificil 1s infinite;
+}
+
+@keyframes pulse-dificil {
+    0% { box-shadow: 0 0 0 4px #ffa35899; }
+    50% { box-shadow: 0 0 0 12px #ffa35844; }
+    100% { box-shadow: 0 0 0 4px #ffa35899; }
+}
+
+/* Tela de parabéns e vencedor */
+.parabens-msg {
+    font-family: 'PowerGrotesk-Bold', Arial, sans-serif !important;
+    font-size: 2.6em;
+    color: #0ff;
+    text-align: center;
+    margin: 80px 0 40px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parabens-msg.vencedor {
+    color: #f6d86e;
+    padding: 50px;
+}
+
+.parabens-msg.erro {
+    color: #ff671c;
+    padding: 50px;
+}
+
+.btn-continuar {
+    font-family: 'PowerGrotesk-Bold', Arial, sans-serif !important;
+    font-size: 1.5em;
+    background: #3fffd6;
+    color: #001237;
+    border: 2px solid #3fffd6;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #3fffd6a0;
+    padding: 18px 60px;
+    margin: 0 auto;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #fff8;
+}
+
+.btn-continuar:hover {
+    background: #0ff;
+    color: #001237;
+    border-color: #0ff;
+    box-shadow: 0 0 32px #0ffb;
+}
+
+.quiz-medio .btn-continuar {
+    background: #f6d86e;
+    color: #222;
+    border-color: #f6d86e;
+    box-shadow: 0 0 16px #f6d86e99;
+}
+
+.quiz-medio .btn-continuar:hover {
+    background: #ffe89c;
+    border-color: #ffe89c;
+    color: #222;
+    box-shadow: 0 0 32px #f6d86e;
+}
+
+.quiz-dificil .btn-continuar, .parabens-msg.vencedor {
+    background: #ffa358;
+    color: #222;
+    border-color: #ffa358;
+    box-shadow: 0 0 16px #ffa35899;
+}
+
+.quiz-dificil .btn-continuar:hover {
+    background: #ffcba0;
+    border-color: #ffcba0;
+    color: #222;
+    box-shadow: 0 0 32px #ffa358;
+}
+
+/* Animação de piscar para overlay de alternativa correta */
+@keyframes blink-correta {
+    0% { opacity: 1; }
+    10% { opacity: 0.2; }
+    20% { opacity: 1; }
+    30% { opacity: 0.2; }
+    40% { opacity: 1; }
+    50% { opacity: 0.2; }
+    60% { opacity: 1; }
+    70% { opacity: 0.2; }
+    80% { opacity: 1; }
+    90% { opacity: 0.2; }
+    100% { opacity: 0.7; }
+}
+
+.overlay-img.piscar-correta {
+    animation: blink-correta 2s linear;
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+}
+ 

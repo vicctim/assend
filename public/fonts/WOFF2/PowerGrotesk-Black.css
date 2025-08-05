@@ -1,0 +1,9 @@
+/* Webfont: PowerGrotesk-Black */@font-face {
+    font-family: 'PowerGroteskBlack';
+    src: url('PowerGrotesk-Black.woff2') format('woff2'), /* Modern Browsers */
+         url('PowerGrotesk-Black.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

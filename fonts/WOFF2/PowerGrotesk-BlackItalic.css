@@ -1,0 +1,9 @@
+/* Webfont: PowerGrotesk-BlackItalic */@font-face {
+    font-family: 'PowerGroteskBlackIta';
+    src: url('PowerGrotesk-BlackItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('PowerGrotesk-BlackItalic.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,9 @@
+/* Webfont: PowerGrotesk-LightItalic */@font-face {
+    font-family: 'PowerGroteskLightIta';
+    src: url('PowerGrotesk-LightItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('PowerGrotesk-LightItalic.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

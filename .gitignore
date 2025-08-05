@@ -1,0 +1,53 @@
+# Vendor directory
+/vendor/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+/logs/*
+!/logs/.gitkeep
+*.log
+
+# Uploads
+/uploads/*
+!/uploads/.gitkeep
+
+# Cache
+/cache/*
+!/cache/.gitkeep
+
+# Participantes
+/participantes/*
+!/participantes/.gitkeep
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+mysql-data/
+
+# Zone.Identifier files
+*.Zone.Identifier
+
+# Temporary scripts
+fix-*.php
+remove-*.php
+extract-*.php
+import-*.php
+UTF8-STATUS.md
+
+# SQL files (except schema)
+sql_live_pixfilm.sql
+questions-import.sql
+alternatives-only.sql
